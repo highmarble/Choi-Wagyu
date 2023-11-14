@@ -1,0 +1,534 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400, 600, 800;
+    font-style: normal;
+}
+
+.web-header {
+    display: none;
+}
+
+.m-header {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    justify-content: space-between;
+    background: white;
+    border-bottom: 1px solid #bcbcbc;
+    z-index: 9999;
+}
+
+.m-header.prd-list {
+    align-items: center;
+    border-bottom: none;
+}
+
+.m-header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.prd-list-icon {
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+
+.prd-list-icon a:nth-child(1) {
+    margin-right: 1rem;
+}
+
+.prd-list-title {
+    position: absolute;
+    left: 43%;
+    font-size: 1.2rem;
+}
+
+/* Hamburger */
+.mobile-overlay-logo {
+    display: flex;
+    height: 60px;
+    padding: 0 20px;
+    align-items: center;
+}
+
+.mb-gnb-item {
+    padding: 1.5rem 20px;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.mobile-menu,
+.mobile-menu:after,
+.mobile-menu:before {
+    width: 24px;
+    height: 4px;
+    border-radius: 2px;
+}
+
+.mobile-menu-wrapper {
+    display: block;
+    padding: 28px 0;
+    z-index: 1338;
+}
+
+.mobile-menu {
+    position: relative;
+    background: black;
+    transition: all 0ms 200ms;
+    display: block;
+}
+
+.mobile-menu-overlay {
+    z-index: 1337;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: white;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.mobile-menu.animate {
+    background: white;
+}
+
+.mobile-menu:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    background: black;
+    transition: bottom 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.mobile-menu:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    background: black;
+    transition: top 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.mobile-menu.animate:after {
+    top: 0;
+    transform: rotate(45deg);
+    transition: top 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.mobile-menu.animate:before {
+    bottom: 0;
+    transform: rotate(-45deg);
+    transition: bottom 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.visible {
+    display: block !important;
+}
+
+.top-visual {
+    width: 100%;
+    height: 200px;
+    background-image: url(../img/pure_wagyu_intro.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.top-visual h2 {
+    color: #fff;
+    padding-top: 130px;
+    padding-left: 20px;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.product-btn {
+    padding: 20px;
+    overflow: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
+
+.product-btn::-webkit-scrollbar {
+    display: none;
+}
+
+.product-btn li {
+    padding-right: 10px;
+    display: inline-block;
+}
+
+.product-btn li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 0.6rem 0.9rem;
+    border-radius: 30px;
+    border: 1px solid #bcbcbc;
+}
+
+.product-btn li a.active {
+    background-color: #111;
+    color: #fff;
+}
+
+.prd-count {
+    padding: 20px;
+}
+
+#items {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.filterme {
+    width: 50%;
+    height: auto;
+    margin-bottom: 40px;
+    padding-right: 8px;
+}
+
+.filterme:nth-child(even) {
+    padding-left: 8px;
+    padding-right: 0;
+}
+
+.thumb-img {
+    width: 100% !important;
+    background: #f5f5f5;
+    border-radius: 10px;
+}
+
+.filterme .brand {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+    margin-top: 10px;
+    color: #888;
+}
+
+.filterme .title {
+    font-size: 1.125rem;
+    line-height: 2rem;
+}
+
+.filterme .list-filter {
+    font-size: 0.7rem;
+    margin: 10px 0;
+}
+
+.filterme .list-filter .list-category {
+    padding: 3px 6px;
+    border: 1px solid #aeaeae;
+    border-radius: 4px;
+}
+
+.filterme .price {
+    margin-top: 12px;
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+.filterme .price>span {
+    font-size: 0.8125rem;
+    margin-right: 6px;
+    font-weight: 200;
+    color: #888;
+}
+
+.hidden {
+    display: none;
+}
+
+.pagination-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    padding: 1rem 0;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.pagination-number,
+.pagination-button {
+    font-size: 1.1rem;
+    background-color: transparent;
+    border: none;
+    margin: 0.25rem 0.25rem;
+    cursor: pointer;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: .4rem;
+}
+
+.pagination-number:hover,
+.pagination-button:not(.disabled):hover {
+    background: #dddddd;
+}
+
+.pagination-number.active {
+    color: #fff;
+    background: #000;
+}
+
+/* Footer */
+footer {
+    padding: 40px 20px 20px 20px;
+    border-top: 1px solid #000
+}
+
+.foot-logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.foot-link {
+    display: flex;
+}
+
+.foot-link li {
+    padding-right: 15px;
+    margin-top: 30px;
+}
+
+/* 상세페이지 */
+.goods-prd-wrapper {
+    padding-top: 30px;
+}
+
+.prd-location {
+    padding: 0 20px;
+    color: #888;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-arrow {
+    display: none;
+}
+
+.slick-dots {
+    bottom: 15px;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+.slick-dots li button:before {
+    font-size: 30px;
+}
+
+.bottom-inquiry-area {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    padding: .7rem;
+    background-color: #fff;
+}
+
+.inquiry-button {
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    padding: 1rem;
+    font-family: inherit;
+    background-color: #000;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+
+}
+
+.prd-description {
+    padding: 20px;
+    margin-bottom: 80px;
+}
+
+.prd-description .prd-brand {
+    margin: 1rem 0 .8rem 0;
+    font-weight: 400;
+    color: #5b5b5b;
+}
+
+.prd-description .prd-title {
+    font-size: 1.3rem;
+}
+
+.prd-description .prd-sub {
+    margin-top: 1rem;
+    border-top: 1px solid #ccc;
+    font-weight: 400;
+}
+
+.prd-description .prd-sub li {
+    padding-top: 1rem;
+}
+.prd-description .prd-sub .sub-title {
+    display: inline-block;
+    width: 120px;
+}
+.prd-description .prd-sub .prd-weight{
+    font-weight: 600;
+}
+.prd-description .prd-sub .prd-price{
+    font-weight: 600;
+}
+/* 상세페이지 TAB */
+.tab {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.tabnav {
+    font-size: 0;
+    display: flex;
+}
+
+.tabnav li {
+    width: 50%;
+    display: inline-block;
+    height: 46px;
+    text-align: center;
+}
+.tabnav li a.active {
+    border-bottom: 2px solid #000;
+}
+
+.tabnav li a {
+    position: relative;
+    display: block;
+    color: #dcdcdc;
+    padding: 0 30px;
+    line-height: 46px;
+    text-decoration: none;
+    font-size: 1rem;
+    background: #fff;
+    border-bottom: 2px solid #dcdcdc;
+}
+
+.tabnav li a:hover,
+.tabnav li a.active {
+    background: #fff;
+    color: #000;
+}
+
+.tabcontent {
+    margin-top: 30px;
+}
+#tab01>img{
+    width: 100%;
+}
+@media all and (min-width:768px) {
+    .product-btn {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media all and (min-width:1024px) {
+    .m-header {
+        display: none;
+    }
+
+    .web-header {
+        display: flex;
+        position: fixed;
+        width: 100%;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .web-header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 1200px;
+        max-width: 1200px;
+        align-items: center;
+    }
+
+    .web-header .web-logo {
+        font-size: 1.1rem;
+        font-weight: bold;
+        padding-left: 20px;
+        color: #fff;
+    }
+
+    .web-header .web-gnb {
+        display: flex;
+        color: #fff;
+    }
+
+    .web-header .web-gnb li {
+        padding: 0 50px;
+    }
+
+    .web-header .web-gnb li a.active {
+        font-weight: 600;
+    }
+
+    .top-visual {
+        height: 400px;
+    }
+
+    .top-visual h2 {
+        width: 1200px;
+        margin: 0 auto;
+        padding-top: 250px;
+        font-size: 2rem;
+    }
+
+    .prd-count {
+        padding: 28px;
+    }
+
+    .product-btn {
+        display: flex;
+        justify-content: center;
+        padding: 40px 20px;
+    }
+
+    .product-btn li {
+        padding-right: 1rem;
+    }
+
+    .product-btn li a {
+        padding: .8rem 1.3rem;
+        font-size: 1rem;
+    }
+
+    #items {
+        max-width: 1200px;
+    }
+
+    .filterme {
+        width: 25%;
+        padding: 0 8px;
+        margin-bottom: 60px;
+    }
+
+    .filterme:nth-child(even) {
+        padding: 0 8px;
+    }
+
+    /* 상품상세 */
+    .goods-prd-wrapper{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .goods-prd-items{
+        width: 40%;
+    }
+}
