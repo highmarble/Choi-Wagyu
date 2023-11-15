@@ -8,7 +8,6 @@
 .web-header {
     display: none;
 }
-
 .m-header {
     position: fixed;
     display: flex;
@@ -351,39 +350,41 @@ footer {
 
 }
 
-.prd-description {
+.goods-prd-summary {
     padding: 20px;
-    margin-bottom: 80px;
 }
 
-.prd-description .prd-brand {
+.goods-prd-summary .prd-brand {
     margin: 1rem 0 .8rem 0;
     font-weight: 400;
     color: #5b5b5b;
 }
 
-.prd-description .prd-title {
+.goods-prd-summary .prd-title {
     font-size: 1.3rem;
 }
 
-.prd-description .prd-sub {
+.goods-prd-summary .prd-sub {
     margin-top: 1rem;
     border-top: 1px solid #ccc;
     font-weight: 400;
 }
 
-.prd-description .prd-sub li {
+.goods-prd-summary .prd-sub li {
     padding-top: 1rem;
 }
-.prd-description .prd-sub .sub-title {
+.goods-prd-summary .prd-sub .sub-title {
     display: inline-block;
     width: 120px;
 }
-.prd-description .prd-sub .prd-weight{
+.goods-prd-summary .prd-sub .prd-weight{
     font-weight: 600;
 }
-.prd-description .prd-sub .prd-price{
+.goods-prd-summary .prd-sub .prd-price{
     font-weight: 600;
+}
+.prd-description{
+    margin-bottom: 100px;
 }
 /* 상세페이지 TAB */
 .tab {
@@ -422,6 +423,7 @@ footer {
 .tabnav li a.active {
     background: #fff;
     color: #000;
+    font-weight: 600;
 }
 
 .tabcontent {
@@ -449,6 +451,11 @@ footer {
         height: 100px;
         justify-content: center;
         align-items: center;
+        z-index: 9999;
+    }
+
+    .web-header-goods{
+        background-color: #000;
     }
 
     .web-header-wrapper {
@@ -527,8 +534,28 @@ footer {
     .goods-prd-wrapper{
         max-width: 1200px;
         margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 180px;
     }
     .goods-prd-items{
         width: 40%;
+    }
+    .goods-prd-summary{
+        width: 50%;
+    }
+    .prd-description{
+        max-width: 1200px;
+        width:1200px;
+        margin: 0 auto;
+    }
+    .bottom-inquiry-area{
+        display: none;
+    }
+    /* FOOTER */
+    .foot-area{
+        width: 1200px;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 }

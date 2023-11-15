@@ -4,26 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pure wagyu 제품</title>
-    <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/sub.css">
-    <script src="/js/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/sub.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
 </head>
 <body>
-    <nav id="header">
+    <header class="web-header">
+        <div class="web-header-wrapper">
+            <h1 class="web-logo">The K Wagyu</h1>
+            <ul class="web-gnb">
+                <li><a href="#" class="active">Pure Wagyu 제품</a></li>
+                <li><a href="#">JACK'S CREEK 제품</a></li>
+                <li><a href="#">브랜드소개</a></li>
+                <li><a href="#">도매문의</a></li>
+                <li><a href="#">소매구매</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="m-header">
         <h1 class="logo">The K Wagyu</h1>
-        <button class="mobile-nav-btn">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-        </button>
-        <ul class="gnb">
-            <li><a href="#">Pure Wagyu 제품</a></li>
-            <li><a href="#">JACK'S CREEK 제품</a></li>
-            <li><a href="#">브랜드소개</a></li>
-            <li><a href="#">도매문의</a></li>
-            <li><a href="#">소매구매</a></li>
-        </ul>
-    </nav>
+        <a href="#" class="mobile-menu-wrapper">
+            <div class="mobile-menu"></div>
+        </a>
+        <div class="mobile-menu-overlay">
+            <h1 class="mobile-overlay-logo">The K Wagyu</h1>
+            <ul class="mb-gnb">
+                <li class="mb-gnb-item"><a href="#">Pure Wagyu 제품</a></li>
+                <li class="mb-gnb-item"><a href="#">JACK'S CREEK 제품</a></li>
+                <li class="mb-gnb-item"><a href="#">브랜드소개</a></li>
+                <li class="mb-gnb-item"><a href="#">도매문의</a></li>
+                <li class="mb-gnb-item"><a href="#">소매구매</a></li>
+            </ul>
+        </div>
+    </div>
     <section>
         <div class="top-visual">
             <h2>Pure Wagyu 제품</h2>
@@ -31,9 +44,9 @@
     </section>
     <section class="product">
         <ul class="product-btn">
-            <li><a class="btn" id="all" href="pureProductAll.html">전체</a></li>
+            <li><a class="active btn" id="all" href="pureProductAll.html">전체</a></li>
             <li><a class="btn" id="cold" href="pureProductCold.html">냉장</a></li>
-            <li><a class="btn active" id="frozen" href="pureProductFrozen.html">냉동</a></li>
+            <li><a class="btn" id="frozen" href="pureProductFrozen.html">냉동</a></li>
             <li><a class="btn" id="mb6-7" href="pureProductMb67.html">MB 6-7</a></li>
             <li><a class="btn" id="mb8-9" href="pureProductMb89.html">MB 8-9</a></li>
             <li><a class="btn" id="roast" href="pureProductRoast.html">구이</a></li>
@@ -42,13 +55,14 @@
 
         <div class="spacer"></div>
         <div style="max-width: 1200px; margin: 0 auto; overflow: hidden;">
-            <p class="prd-count">총 <span id="objectCountDiv" style="font-weight: bold;"></span>개의 상품이 있습니다.</p>
+            <!-- <p class="prd-count">총 <span id="objectCountDiv" style="font-weight: bold;"></span>개의 상품이 있습니다.</p> -->
+            <p class="prd-count">상품 준비중입니다.</p>
             <ul id="items">
             </ul>
         </div>
 
     </section>
-    <div class="pagination-container">
+    <!-- <div class="pagination-container">
         <button class="pagination-button" id="prev-button" aria-label="Previous page" title="Previous page">
             &lt;
         </button>
@@ -60,17 +74,17 @@
         <button class="pagination-button" id="next-button" aria-label="Next page" title="Next page">
             &gt;
         </button>
-    </div>
-    <script>
-        //items
-        const products = [
-            
-        ]
-        //count
-        const objectCount = products.length;
-        const objectCountDiv = document.getElementById("objectCountDiv");
-        objectCountDiv.innerHTML = objectCount;
-    </script>
-    <script src="/js/sub.js"></script>
+    </div> -->
+    <footer>
+        <div class="foot-area">
+            <h1 class="foot-logo">The K Wagyu</h1>
+            <ul class="foot-link">
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="../js/sub.js"></script>
 </body>
 </html>
