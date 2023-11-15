@@ -173,11 +173,13 @@
     padding: 0.6rem 0.9rem;
     border-radius: 30px;
     border: 1px solid #bcbcbc;
+    background: #fff;
 }
 
 .product-btn li a.active {
     background-color: #111;
     color: #fff;
+    border-color: 1px solid #111;
 }
 
 .prd-count {
@@ -484,6 +486,11 @@ footer {
         padding: 0 50px;
     }
 
+    .web-header .web-gnb li a:hover {
+        font-weight: 600;
+        transition: all .2s;
+    }
+
     .web-header .web-gnb li a.active {
         font-weight: 600;
     }
@@ -495,18 +502,21 @@ footer {
     .top-visual h2 {
         width: 1200px;
         margin: 0 auto;
-        padding-top: 250px;
+        padding-top: 220px;
         font-size: 2rem;
     }
 
     .prd-count {
         padding: 28px;
+        margin-top: 20px;
+        font-size: 1.1rem;
     }
 
     .product-btn {
         display: flex;
         justify-content: center;
         padding: 20px;
+        background:#f5f5f5;
     }
 
     .product-btn li {
