@@ -1,6 +1,6 @@
 $(function(){
     // header,footer load
-    $('.header__nav').load('main-page/header-nav.html');
+    $('.header__nav').load('/main-page/header-nav.html');
     $('.footer').load('/main-page/footer.html');
 
     //section-about tab action
