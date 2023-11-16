@@ -1,20 +1,14 @@
 @charset "UTF-8";
-
-/* 프리텐다드 폰트  */
-@font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400, 500, 600, 700, 800;
-    font-style: normal;
-}
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 body {
     overflow-x: hidden;
+    font-family: 'Pretendard';
 }
 
 main {
     width: 100vw;
-    height: 1080px;
+    height: 100vh;
     background-color: #000;
 }
 
@@ -48,11 +42,25 @@ main .container {
 }
 
 .main__tile-wrap p {
+    width: 50%;
     color: #FFF;
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 150%;
+    word-break: keep-all;
 }
+
+@media all and (max-width:1024px) {
+    .main__tile-wrap h2 {
+        font-size: 3rem;
+    }
+
+    .main__tile-wrap p {
+        font-size: 1.25rem;
+    }
+}
+
+@media all and (max-width:768px) {}
 
 
 /* section - common */
@@ -67,12 +75,12 @@ section .container {
     padding: 10rem 0rem;
     flex-direction: column;
     align-items: center;
-    gap: 10rem;
+    gap: 5rem;
 }
 
 .section-title {
     color: #000;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 700;
     line-height: 120%;
 }
@@ -112,19 +120,47 @@ section .container {
 
 .text-wrap-name {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 700;
 }
 
 .text-wrap-info {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-style: normal;
     font-weight: 500;
 }
 
+@media all and (max-width:768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .contents-area {
+        gap: 2rem;
+    }
+
+    .text-wrap-name {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .text-wrap-info {
+        text-align: center;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+    }
+}
+
 
 /* section - product */
+.contents-area>img {
+    width: 240px;
+    height: auto;
+}
+
 .btn_direct {
     display: flex;
     padding: 1rem 3rem;
@@ -142,6 +178,22 @@ section .container {
     transition: all 0.3s;
 }
 
+@media all and (max-width:1024px) {}
+
+@media all and (max-width:768px) {
+    .product .section__contents-wrap {
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .contents-area>img {
+        width: 200px;
+    }
+
+    .btn_direct {
+        padding: 1rem 2rem;
+    }
+}
 
 /* section - about */
 .about {
@@ -153,11 +205,12 @@ section .container {
 }
 
 .about .section-title {
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
 }
 
 .tab-container {
-    max-width: 1920px;
+    width: 1200px;
+    max-width: 1200px;
     height: auto;
     position: relative;
 }
@@ -180,7 +233,8 @@ section .container {
     transition: all 0.5s;
     cursor: pointer;
 }
-.tab-item > img {
+
+.tab-item>img {
     filter: invert();
     transition: all 0.5s;
 }
@@ -191,12 +245,16 @@ section .container {
     transition: all 0.5s;
 }
 
+.about .text-wrap-name {
+    font-size: 1.5rem;
+}
+
 .about .text-wrap-info {
     display: block;
     width: 70%;
     height: 0;
     overflow: hidden;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 120%;
     text-align: left;
@@ -206,47 +264,53 @@ section .container {
 .tab-item.on {
     background-color: #000;
 }
-.tab-item.on > img {
+
+.tab-item.on>img {
     filter: none;
 }
+
 .tab-item.on .text-wrap {
     gap: 1rem;
     color: #fff;
 }
+
 .tab-item.on .text-wrap-info {
     height: auto;
 }
 
-.tab-img-wrap {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
-}
 .img-box {
-    width: 720px;
-    height: 640px;
+    width: 640px;
+    height: 560px;
     overflow: hidden;
     position: absolute;
     top: 0;
-    right: -360px;
+    right: 0;
 }
-.img-box > img {
+
+.img-box>img {
     position: absolute;
     top: 0;
     right: 0;
     transition: all 0.5s;
 }
-.img-box > img.bg {
+
+.img-box>img.bg {
     opacity: 0;
 }
-.img-box > img.obj {
-    right: -720px;
+
+.img-box>img.obj {
+    right: -560px;
 }
 
-.img-box.on > img {
+.img-box.on>img {
     opacity: 1;
     right: 0;
+}
+
+@media all and (max-width:1024px) {}
+
+@media all and (max-width:768px) {
+
 }
 
 
@@ -290,3 +354,17 @@ section .container {
     background-color: #D4494F;
 }
 
+@media all and (max-width:768px) {
+    .title-sub {
+        font-size: 1.2rem;
+    }
+
+    .contact .section__contents-wrap {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .contact .text-wrap {
+        gap: 1rem;
+    }
+}
