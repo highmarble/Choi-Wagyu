@@ -14,3 +14,26 @@ window.addEventListener("scroll", () => {
       webLogo.setAttribute("style", "color: #fff;");
    }
 });
+
+$('.goods-prd-items').slick({
+   dots: true,
+   infinite: true,
+   prevArrow: false,
+   nextArrow: false,
+});
+
+//뒤로가기
+function goBack() {
+   window.history.back();
+}
+
+//Tab
+$(function () {
+   $('.tabcontent > div').hide();
+   $('.tabnav a').click(function () {
+       $('.tabcontent > div').hide().filter(this.hash).fadeIn();
+       $('.tabnav a').removeClass('active');
+       $(this).addClass('active');
+       return false;
+   }).filter(':eq(0)').click();
+});

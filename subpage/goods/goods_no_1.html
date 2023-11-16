@@ -16,9 +16,9 @@
 <body>
     <header class="web-header web-header-goods">
         <div class="web-header-wrapper">
-            <h1 class="web-logo">The K Wagyu</h1>
+            <h1 class="web-logo">HIGHWAGYU</h1>
             <ul class="web-gnb">
-                <li><a href="#" class="active">Pure Wagyu 제품</a></li>
+                <li><a href="../pureProductAll.html" class="active">Pure Wagyu 제품</a></li>
                 <li><a href="#">JACK'S CREEK 제품</a></li>
                 <li><a href="#">브랜드소개</a></li>
                 <li><a href="#">도매문의</a></li>
@@ -35,7 +35,7 @@
     </div>
     <div class="prd-headcategory">
         <ol>
-            <li><a href="#">home</a></li>
+            <li><a href="#"><img src="../../img/home-icon.png" alt=""></a></li>
             <li><a href="../pureProductAll.html">Pure Wagyu 제품</a></li>
             <li><a href="#">양지</a></li>
         </ol>
@@ -61,6 +61,7 @@
             </ul>
         </div>
     </section>
+    <div class="prd-container">
     <div class="prd-description">
         <div class="tab">
             <ul class="tabnav">
@@ -130,9 +131,9 @@
                                 <td class="table-td">식품위생법에 따른 수입신고 필함</td>
                             </tr>
                             <tr>
-                                <th class="table-th">소비자안전을
+                                <th class="table-th" style="border-bottom: none;">소비자안전을
                                     위한 주의사항</th>
-                                <td class="table-td">제품에 별도 표시</td>
+                                <td class="table-td" style="border-bottom: none;">제품에 별도 표시</td>
                             </tr>
                         </tbody>
                     </table>
@@ -140,36 +141,21 @@
             </div>
         </div>
     </div>
+    </div>
     <div class="bottom-inquiry-area">
         <button class="inquiry-button">문의하기</button>
     </div>
-    <!-- <script src="../../js/sub.js"></script> -->
+    <footer>
+        <div class="foot-area">
+            <h1 class="foot-logo">HIGHWAGYU</h1>
+            <ul class="foot-link">
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+            </ul>
+        </div>
+    </footer>
     <script src="../../js/goods.js"></script>
-
-    <script>
-        $('.goods-prd-items').slick({
-            dots: true,
-            infinite: true,
-            prevArrow: false,
-            nextArrow: false,
-        });
-
-        //뒤로가기
-        function goBack() {
-            window.history.back();
-        }
-
-        //Tab
-        $(function () {
-            $('.tabcontent > div').hide();
-            $('.tabnav a').click(function () {
-                $('.tabcontent > div').hide().filter(this.hash).fadeIn();
-                $('.tabnav a').removeClass('active');
-                $(this).addClass('active');
-                return false;
-            }).filter(':eq(0)').click();
-        });
-    </script>
 </body>
 
 </html>

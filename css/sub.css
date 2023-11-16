@@ -347,6 +347,7 @@ footer {
     border-top: 1px solid #ccc;
     padding: .7rem;
     background-color: #fff;
+    cursor: pointer;
 }
 
 .inquiry-button {
@@ -456,18 +457,29 @@ footer {
 #tab01>img{
     width: 100%;
 }
-.prd-desc-table, td, th{
-    border : 1px solid #ccc;
-    border-collapse : collapse;
-} 
-.prd-desc-table .table-th{
-    padding: 20px;
+#tab02{
+    padding: 25px;
     background-color: #f5f5f5;
+    border-radius: 20px;
+}
+.prd-desc-table{
+    width: 100%;
+}
+.prd-desc-table, td, th{
+    border: none;
+}
+.prd-desc-table .table-th{
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    background-color: transparent;
+    line-height: 1.3;
 }
 .prd-desc-table .table-td{
-    text-align: center;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+    padding-left: 1rem;
 }
-
 @media all and (min-width:768px) {
     .product-btn {
         display: flex;
@@ -584,6 +596,7 @@ footer {
     }
     .prd-headcategory ol{
         display: flex;
+        align-items: center;
     }
     .prd-headcategory ol li{
         color: #5b5b5b;
@@ -619,10 +632,10 @@ footer {
         font-size: 2rem;
     }
     .goods-prd-summary .title-price{
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
     .goods-prd-summary .prd-sub{
-        margin-top: 30px;
+        margin-top: 10px;
     }
     .prd-description{
         max-width: 1200px;
@@ -654,11 +667,31 @@ footer {
     .tab{
         margin-top: 80px;
     }
+    #tab02{
+        padding: 25px;
+        border-radius: 20px;
+    }
+    .prd-desc-table{
+        width: 100%;
+    }
+    .prd-desc-table, td, th{
+        border: none;
+    }
+    .prd-desc-table .table-th{
+        padding: 1rem;
+        text-align: left;
+        border-bottom: 1px solid #ccc;
+        background-color: transparent;
+    }
+    .prd-desc-table .table-td{
+        border-bottom: 1px solid #ccc;
+        text-align: left;
+    }
     .tabnav li a{
         font-size: 1.2rem;
     }
     .tabcontent{
-        margin-top: 60px;
+        margin:80px 0 80px 0;
         padding: 0;
     }
     /* FOOTER */
