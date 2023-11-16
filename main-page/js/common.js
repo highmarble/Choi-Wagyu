@@ -1,7 +1,7 @@
 $(function(){
     // header,footer load
-    $('.header__nav').load('/Choi-Wagyu/main-page/header-nav.html');
-    $('.footer').load('/Choi-Wagyu/main-page/footer.html');
+    $('.header__nav').load('main-page/header-nav.html');
+    $('.footer').load('/main-page/footer.html');
 
     //section-about tab action
     $('.tab-item').on('click', function(){
