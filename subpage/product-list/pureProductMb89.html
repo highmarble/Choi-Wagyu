@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pure wagyu 제품</title>
+    <link rel="stylesheet" href="/common/css/app.css"/><!-- 공통 css -->
+    <link rel="stylesheet" href="/subpage/product-list/css/sub.css"/><!-- 해당 페이지에만 적용 될 css -->
+    <script src="/common/js/jquery-3.7.1.min.js"></script>
+    <script src="/common/js/slick.min.js"></script>
+    <script src="/common/js/header-footer.js"></script>
+</head>
+
+
+<body>
+
+    <div class="header__nav"></div>
+
+    <section>
+        <div class="top-visual">
+            <h2>Pure Wagyu 제품</h2>
+        </div>
+    </section>
+    <section class="product">
+        <ul class="product-btn">
+            <li><a class="btn" id="all" href="pureProductAll.html">전체</a></li>
+            <li><a class="btn" id="cold" href="pureProductCold.html">냉장</a></li>
+            <li><a class="btn" id="frozen" href="pureProductFrozen.html">냉동</a></li>
+            <li><a class="btn" id="mb6-7" href="pureProductMb67.html">MB 6-7</a></li>
+            <li><a class="btn active" id="mb8-9" href="pureProductMb89.html">MB 8-9</a></li>
+            <li><a class="btn" id="roast" href="pureProductRoast.html">구이</a></li>
+            <li><a class="btn" id="butchery" href="pureProductButchery.html">정육</a></li>
+        </ul>
+
+        <div class="spacer"></div>
+        <div style="max-width: 1200px; margin: 0 auto; overflow: hidden;">
+            <p class="prd-count">총 <span id="objectCountDiv" style="font-weight: bold;"></span>개의 상품이 있습니다.</p>
+            <ul id="items">
+            </ul>
+        </div>
+
+    </section>
+    <div class="pagination-container">
+        <button class="pagination-button" id="prev-button" aria-label="Previous page" title="Previous page">
+            &lt;
+        </button>
+
+        <div id="pagination-numbers">
+
+        </div>
+
+        <button class="pagination-button" id="next-button" aria-label="Next page" title="Next page">
+            &gt;
+        </button>
+    </div> 
+    <footer class="footer"></footer>
+
+    <script>
+        //items
+        const products = [
+            { thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'Pure Wagyu', title: '양지', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
+            { thumb: '/subpage/product-list/img/thumb_product02.png', brand: 'Pure Wagyu', title: '갈비', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_2.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
+            { thumb: '/subpage/product-list/img/thumb_product09.png', brand: 'Pure Wagyu', title: '우둔', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_9.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
+            { thumb: '/subpage/product-list/img/thumb_product04.png', brand: 'Pure Wagyu', title: '설도', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_4.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
+            { thumb: '/subpage/product-list/img/thumb_product05.jpg', brand: 'Pure Wagyu', title: '설도', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_5.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
+        ]
+        //count
+        const objectCount = products.length;
+        const objectCountDiv = document.getElementById("objectCountDiv");
+        objectCountDiv.innerHTML = objectCount;
+    </script>
+    <script src="/subpage/product-list/js/sub.js"></script>
+</body>
+</html>

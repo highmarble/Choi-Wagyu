@@ -1,0 +1,6 @@
+/* 공통 css */
+@import url(/common/css/reset.css);
+@import url(/common/css/font.css);
+@import url(/common/css/slick-theme.css);
+@import url(/common/css/slick.css);
+@import url(/common/css/header-footer.css);
