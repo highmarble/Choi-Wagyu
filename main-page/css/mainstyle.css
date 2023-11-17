@@ -22,6 +22,20 @@ main .container {
     background-position: center center;
     display: flex;
     align-items: center;
+    animation: intro-ani 2s ease-out;
+    overflow: hidden;
+}
+
+@keyframes intro-ani {
+    0% {
+        transform: scale(80%);
+        opacity: .5;
+    }
+
+    100% {
+        transform: scale(100%);
+        opacity: 1;
+    }
 }
 
 .main__tile-wrap {
@@ -39,6 +53,7 @@ main .container {
     font-size: 5rem;
     font-weight: 700;
     line-height: 120%;
+    animation: title-ani-h2 4s ease-out;
 }
 
 .main__tile-wrap p {
@@ -48,6 +63,37 @@ main .container {
     font-weight: 500;
     line-height: 150%;
     word-break: keep-all;
+    animation: title-ani-p 6s ease-out;
+}
+
+@keyframes title-ani-h2 {
+    0% {
+        margin-top: 100px;
+        opacity: 0;
+    }
+
+    50% {
+        margin-top: 100px;
+        opacity: 0;
+    }
+
+    100% {
+        margin-top: 0;
+    }
+}
+
+@keyframes title-ani-p {
+    0% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    100% {
+        margin-top: 0;
+    }
 }
 
 @media all and (max-width:1024px) {
@@ -66,16 +112,20 @@ main .container {
 /* section - common */
 section {
     background-color: #fff;
+    padding: 3rem 0;
+    transition: all .5s;
 }
 
 section .container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    padding: 10rem 0rem;
+    padding: 7rem 0rem;
     flex-direction: column;
     align-items: center;
     gap: 5rem;
+    opacity: 0;
+    transition: all .5s;
 }
 
 .section-title {
@@ -131,7 +181,18 @@ section .container {
     font-weight: 500;
 }
 
+@media all and (max-width:1024px) {
+    section .container {
+        width: 100%;
+        padding: 2rem;
+    }
+}
+
 @media all and (max-width:768px) {
+    section .container {
+        padding: 1rem;
+    }
+
     .section-title {
         font-size: 2rem;
     }
@@ -197,22 +258,24 @@ section .container {
 
 /* section - about */
 .about {
-    padding: 10rem 0rem;
     background-color: #F5F5F5;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.about .section-title {
-    margin-bottom: 5rem;
-}
 
 .tab-container {
-    width: 1200px;
     max-width: 1200px;
     height: auto;
     position: relative;
+    display: flex;
+    align-self: stretch;
+    margin: 0 auto;
+}
+
+.about__mobile {
+    display: none;
 }
 
 .tab-list {
@@ -222,6 +285,10 @@ section .container {
     align-items: flex-start;
     gap: 2rem;
     position: relative;
+}
+
+.tab-list__mobile-img {
+    display: none;
 }
 
 .tab-item {
@@ -251,7 +318,7 @@ section .container {
 
 .about .text-wrap-info {
     display: block;
-    width: 70%;
+    width: 90%;
     height: 0;
     overflow: hidden;
     font-size: 1rem;
@@ -278,9 +345,14 @@ section .container {
     height: auto;
 }
 
+.tab-img-wrap {
+    width: 620px;
+    height: auto;
+}
+
 .img-box {
-    width: 640px;
-    height: 560px;
+    width: 620px;
+    height: 544px;
     overflow: hidden;
     position: absolute;
     top: 0;
@@ -299,7 +371,7 @@ section .container {
 }
 
 .img-box>img.obj {
-    right: -560px;
+    right: -620px;
 }
 
 .img-box.on>img {
@@ -307,10 +379,68 @@ section .container {
     right: 0;
 }
 
-@media all and (max-width:1024px) {}
+@media all and (max-width:1024px) {
+    .tab-container {
+        /* width: 100%;
+        padding: 2rem; */
+        width: calc(100vw - 4rem);
+    }
+
+    .about__mobile {
+        display: block;
+    }
+
+    .tab-list {
+        display: none;
+    }
+
+    .tab-img-wrap {
+        display: none;
+    }
+
+    .tab-list__mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: stretch;
+        gap: 5rem;
+    }
+
+    .tab-item-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        align-self: stretch;
+    }
+
+    .tab-item-mobile>img {
+        width: 100%;
+    }
+
+    .about .text-wrap {
+        align-items: center;
+        gap: 1rem;
+        ;
+    }
+
+    .about .text-wrap-name {
+        font-size: 1.75rem;
+    }
+
+    .about .text-wrap-info {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        font-size: 1.25rem;
+    }
+}
 
 @media all and (max-width:768px) {
-
+    .tab-container {
+        width: 100%;
+        padding: 1rem;
+    }
 }
 
 
