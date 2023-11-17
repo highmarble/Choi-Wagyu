@@ -586,7 +586,32 @@ footer {
     text-align: center;
     vertical-align: middle;
 }
+/* JACK'S CREEK BRAND */
+.wagyu-x-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
 
+}
+.wagyu-x-logo{
+    width: 35%;
+}
+.wagyu-x-table-wrap{
+    width: 60%;
+}
+.wagyu-x-table{
+    width: 100%;
+    text-align: center;
+}
+.wagyu-x-table .x-title{
+    background-color: #f5f5f5;
+    border-top: 1px solid #b5b5b5;
+}
+.wagyu-x-table th, .wagyu-x-table td{
+    padding: 1rem;
+    border-bottom: 1px solid #b5b5b5;
+}
 
 @media all and (min-width:768px) {
     .product-btn {
@@ -867,6 +892,30 @@ footer {
         font-size: 1rem;
         border: 1px solid #b5b5b5;
         padding: .8rem;
+    }
+    /* JACK'S CREEK */
+    .wagyu-x-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .wagyu-x-logo{
+        width: 35%;
+    }
+    .wagyu-x-table-wrap{
+        width: 60%;
+    }
+    .wagyu-x-table{
+        width: 100%;
+        text-align: center;
+    }
+    .wagyu-x-table .x-title{
+        background-color: #f5f5f5;
+        border-top: 1px solid #b5b5b5;
+    }
+    .wagyu-x-table th, .wagyu-x-table td{
+        padding: 1rem;
+        border-bottom: 1px solid #b5b5b5;
     }
     /* FOOTER */
     .foot-area{
