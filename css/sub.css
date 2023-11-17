@@ -485,7 +485,7 @@ footer {
 }
 
 /* 브랜드소개 */
-.brand-title{
+/* .brand-title{
     font-weight: 600;
     font-size: 1.6rem;
     padding: 20px 1rem;
@@ -530,6 +530,87 @@ footer {
     border: 1px solid #b5b5b5;
     vertical-align: middle;
     text-align: center;
+} */
+.brand-container{
+    padding: 20px;
+    padding-top: 80px;
+}
+.brand-container .content-box{
+    margin-bottom: 5rem;
+}
+.brand-container .content-box .title{
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 3;
+}
+.brand-container .content-box .content h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding:10px 0 20px 0;
+}
+.brand-container .content-box .content .brand-txt{
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+.brand-container .content-box .content img{
+    width: 100%;
+    margin-top: 2rem;
+}
+.brand-container .content-box .content .marble-score-pic{
+    display: flex;
+    justify-content: space-between;
+}
+.brand-container .content-box .content .marble-score-pic li{
+    margin-right: 6px;
+    text-align: center;
+    line-height: 2;
+}
+.brand-container .content-box .content .marble-score-pic img{
+    width: 100%;
+    display: block;
+    border-radius: 6px;
+}
+.brand-container .content-box .content .marble-score-pic img:last-chile{
+    padding: 0;
+}
+.brand-container .content-box .content .brand-table{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.brand-container .content-box .content .brand-table thead{
+    background-color: #f5f5f5;;
+}
+.brand-container .content-box .content .brand-table th, td{
+    padding: .5rem;
+    border: 1px solid #b5b5b5;
+    text-align: center;
+    vertical-align: middle;
+}
+/* JACK'S CREEK BRAND */
+.wagyu-x-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+
+}
+.wagyu-x-logo{
+    width: 35%;
+}
+.wagyu-x-table-wrap{
+    width: 60%;
+}
+.wagyu-x-table{
+    width: 100%;
+    text-align: center;
+}
+.wagyu-x-table .x-title{
+    background-color: #f5f5f5;
+    border-top: 1px solid #b5b5b5;
+}
+.wagyu-x-table th, .wagyu-x-table td{
+    padding: 1rem;
+    border-bottom: 1px solid #b5b5b5;
 }
 
 @media all and (min-width:768px) {
@@ -747,33 +828,94 @@ footer {
         padding: 0;
     }
     /* 브랜드소개 */
-    .brand-wrap{
-        display: flex;
-        width: 1200px;
+    .brand-container{
+        position: relative;
+        width: 100%;
         max-width: 1200px;
         margin: 0 auto;
+        padding-top: 9rem;
     }
-    .brand-wrap .brand-title{
-        width: 45%;
-        font-size: 2.3rem;
+    .brand-container .content-box{
+        display: flex;
+        margin-bottom: 9rem;
+    }
+    .brand-container .content-box .title{
+        width: 340px;
+        font-size: 1.3rem;
         font-weight: 600;
+        padding-top: 1rem;
     }
-    .brand-describe{
-        padding-top: 30px;
-        line-height: 1.5;
+    .brand-container .content-box .content{
+        width: calc(100% - 340px);
+        padding-top: 20px;
     }
-    .brand-describe .brand-txt{
-        margin: 1rem 0;
+    .brand-container .content-box .content h1{
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        line-height: 1.4;
+        padding-top: 0;
     }
-    .brand-row{
-        margin-top: 60px;
+    .brand-container .content-box .content img{
+        width: 100%;
+        margin-top: 2rem;
     }
-    .brand-table th, td{
+    .brand-container .content-box .marble-score-pic{
+        display: flex;
+    }
+    .brand-container .content-box .marble-score-pic li{
+        padding-right: 10px;
+        text-align: center;
+    }
+    .brand-container .content-box .marble-score-pic li:last-child{
+        padding-right: 0;
+        margin-right: 0;
+    }
+    .brand-container .content-box .marble-score-pic img{
+        /* padding-right: 1rem; */
+        width: 100%;
+    }
+    .brand-container .content-box .marble-score-pic span{
+        font-size: 1.1rem;
+        padding-top: 1rem;
+        line-height: 2.5;
+    }
+    .brand-container .content-box .content .brand-txt{
+        font-size: 1.2rem;
+        line-height: 1.6;
+        padding-top: .5rem;
+    }
+    .brand-container .content-box .content .brand-table{
+        width: 100%;
+    }
+    .brand-container .content-box .content .brand-table th, .brand-table td{
         font-size: 1rem;
         border: 1px solid #b5b5b5;
+        padding: .8rem;
     }
-    .brand-packer{
-        margin-bottom: 100px;
+    /* JACK'S CREEK */
+    .wagyu-x-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .wagyu-x-logo{
+        width: 35%;
+    }
+    .wagyu-x-table-wrap{
+        width: 60%;
+    }
+    .wagyu-x-table{
+        width: 100%;
+        text-align: center;
+    }
+    .wagyu-x-table .x-title{
+        background-color: #f5f5f5;
+        border-top: 1px solid #b5b5b5;
+    }
+    .wagyu-x-table th, .wagyu-x-table td{
+        padding: 1rem;
+        border-bottom: 1px solid #b5b5b5;
     }
     /* FOOTER */
     .foot-area{
