@@ -747,11 +747,12 @@ footer {
         padding: 0;
     }
     /* 브랜드소개 */
-    .brand-wrap{
+    /* .brand-wrap{
         display: flex;
         width: 1200px;
         max-width: 1200px;
         margin: 0 auto;
+        padding-top: 80px;
     }
     .brand-wrap .brand-title{
         width: 45%;
@@ -764,6 +765,7 @@ footer {
     }
     .brand-describe .brand-txt{
         margin: 1rem 0;
+        line-height: 1.75;
     }
     .brand-row{
         margin-top: 60px;
@@ -774,6 +776,57 @@ footer {
     }
     .brand-packer{
         margin-bottom: 100px;
+    } */
+    .brand-container{
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-top: 80px;
+    }
+    .brand-container .content-box{
+        display: flex;
+        margin-bottom: 9rem;
+    }
+    .brand-container .content-box .title{
+        width: 340px;
+        font-size: 1.3rem;
+        font-weight: 600;
+        padding-top: 1rem;
+    }
+    .brand-container .content-box .content{
+        width: calc(100% - 340px);
+    }
+    .brand-container .content-box .content h1{
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        line-height: 1.4;
+    }
+    .brand-container .content-box .content img{
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .brand-container .content-box .marble-score-pic{
+        display: flex;
+    }
+    .brand-container .content-box .marble-score-pic li{
+        padding-right: 10px;
+        text-align: center;
+    }
+    .brand-container .content-box .marble-score-pic img{
+        /* padding-right: 1rem; */
+        width: 100%;
+    }
+    .brand-container .content-box .marble-score-pic span{
+        font-size: 1.1rem;
+        padding-top: 1rem;
+        line-height: 2.5;
+    }
+    .brand-container .content-box .content .brand-txt{
+        font-size: 1.2rem;
+        line-height: 1.4;
+        padding-top: .5rem;
     }
     /* FOOTER */
     .foot-area{
