@@ -25,6 +25,15 @@ window.addEventListener("scroll", () => {
     }
 });
 
+$('.mobile-menu-wrapper').on('click', function () {
+    $('.mobile-menu').toggleClass('animate');
+    $('.mobile-menu-overlay').toggleClass('visible');
+})
+$('.mobile-menu-overlay > ul > li > a').on('click', function () {
+    $('.mobile-menu').removeClass('animate');
+    $('.mobile-menu-overlay').removeClass('visible');
+})
+
 // list layout
 function layout(items) {
     items.forEach(item => {
