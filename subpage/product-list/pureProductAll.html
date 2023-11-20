@@ -5,16 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pure wagyu 제품</title>
     <link rel="stylesheet" href="/common/css/app.css"/><!-- 공통 css -->
+    <link rel="stylesheet" href="/common/css/header-footer.css"/>
     <link rel="stylesheet" href="/subpage/product-list/css/sub.css"/><!-- 해당 페이지에만 적용 될 css -->
     <script src="/common/js/jquery-3.7.1.min.js"></script>
     <script src="/common/js/slick.min.js"></script>
-    <script src="/common/js/header-footer.js"></script>
+    <!-- <script src="/common/js/header-footer.js"></script> -->
 </head>
 
 
 <body>
 
-    <div class="header__nav"></div>
+    <!-- WEB HEADER -->
+    <header class="web-header">
+        <div class="web-header-wrapper">
+            <h1 class="web-logo"><a href="../index.html">HIGHWAGYU</a></h1>
+            <ul class="web-gnb">
+                <li><a href="/subpage/product-list/pureProductAll.html">Pure Wagyu 제품</a></li>
+                <li><a href="#">JACK'S CREEK 제품</a></li>
+                <li><a href="/subpage/brand/BrandPureWagyu.html" class="active">브랜드소개</a></li>
+                <li><a href="#">도매문의</a></li>
+                <li><a href="https://high-marble.com/" target="_blank">소매구매</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- MOBILE HEADER -->
+    <div class="m-header">
+        <h1 class="logo">HIGHWAGYU</h1>
+        <a href="#" class="mobile-menu-wrapper">
+            <div class="mobile-menu"></div>
+        </a>
+        <div class="mobile-menu-overlay">
+            <h1 class="mobile-overlay-logo">The K Wagyu</h1>
+            <ul class="mb-gnb">
+                <li class="mb-gnb-item"><a href="/subpage/product-list/pureProductAll.html">Pure Wagyu 제품</a></li>
+                <li class="mb-gnb-item"><a href="#">JACK'S CREEK 제품</a></li>
+                <li class="mb-gnb-item"><a href="/subpage/brand/BrandPureWagyu.html">브랜드소개</a></li>
+                <li class="mb-gnb-item"><a href="#">도매문의</a></li>
+                <li class="mb-gnb-item"><a href="https://high-marble.com/" target="_blank">소매구매</a></li>
+            </ul>
+        </div>
+    </div>
 
     <section>
         <div class="top-visual">
@@ -23,13 +54,13 @@
     </section>
     <section class="product">
         <ul class="product-btn">
-            <li><a class="active btn" id="all" href="pureProductAll.html">전체</a></li>
-            <li><a class="btn" id="cold" href="pureProductCold.html">냉장</a></li>
-            <li><a class="btn" id="frozen" href="pureProductFrozen.html">냉동</a></li>
-            <li><a class="btn" id="mb6-7" href="pureProductMb67.html">MB 6-7</a></li>
-            <li><a class="btn" id="mb8-9" href="pureProductMb89.html">MB 8-9</a></li>
-            <li><a class="btn" id="roast" href="pureProductRoast.html">구이</a></li>
-            <li><a class="btn" id="butchery" href="pureProductButchery.html">정육</a></li>
+            <li><a class="active btn" id="all" href="/subpage/product-list/pureProductAll.html">전체</a></li>
+            <li><a class="btn" id="cold" href="/subpage/product-list/pureProductCold.html">냉장</a></li>
+            <li><a class="btn" id="frozen" href="/subpage/product-list/pureProductFrozen.html">냉동</a></li>
+            <li><a class="btn" id="mb6-7" href="/subpage/product-list/pureProductMb67.html">MB 6-7</a></li>
+            <li><a class="btn" id="mb8-9" href="/subpage/product-list/pureProductMb89.html">MB 8-9</a></li>
+            <li><a class="btn" id="roast" href="/subpage/product-list/pureProductRoast.html">구이</a></li>
+            <li><a class="btn" id="butchery" href="/subpage/product-list/pureProductButchery.html">정육</a></li>
         </ul>
 
         <div class="spacer"></div>
