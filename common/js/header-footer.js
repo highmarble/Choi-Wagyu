@@ -3,7 +3,6 @@ $(function () {
     //nav
     $(window).scroll(function () {
         let winTop = $(window).scrollTop();
-        let navTop = $('.web-header').offset().top;
 
         if (winTop > 20) {
             $('.web-header').css({ 'background-color': '#fff', 'border-bottom': '1px solid #ddd', 'transition': '.2s all' });
