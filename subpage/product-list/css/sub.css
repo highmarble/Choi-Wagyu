@@ -4,6 +4,9 @@
     font-weight: 400, 600, 800;
     font-style: normal;
 }
+.fade{
+    opacity: 0;
+}
 
 .top-visual {
     width: 100%;
@@ -205,6 +208,7 @@
     padding: .7rem;
     background-color: #fff;
     cursor: pointer;
+    text-align: center;
 }
 
 .inquiry-button {
@@ -217,7 +221,7 @@
     border: none;
     border-radius: 4px;
     color: #fff;
-
+    display: block;
 }
 .prd-headcategory{
     display: none;
@@ -261,7 +265,7 @@
     font-weight: 600;
 }
 .prd-description{
-    margin-bottom: 100px;
+    margin-bottom: 10px;
 }
 .prd-web-inquiry{
     display: none;
@@ -443,7 +447,8 @@
         width: 1200px;
         margin: 0 auto;
         padding-top: 220px;
-        font-size: 2rem;
+        font-size: 2.5rem;
+        font-weight: 600;
     }
 
     .prd-count {
@@ -457,6 +462,7 @@
         justify-content: center;
         padding: 20px;
         background:#f5f5f5;
+        border-bottom: 1px solid #dcdcdc;
     }
 
     .product-btn li {
