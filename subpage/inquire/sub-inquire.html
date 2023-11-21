@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>하이와규 문의하기</title>
-    <link rel="stylesheet" href="/main-page/css/app.css"/>
-    <script src="/js/jquery-3.7.1.min.js"></script>
-    <script src="/main-page/js/common.js"></script>
+    <link rel="stylesheet" href="/common/css/app.css" />
+    <link rel="stylesheet" href="/subpage/inquire/css/inquire.css" />
+    <script src="/common/js/jquery-3.7.1.min.js"></script>
+    <script src="/common/js/header-footer.js"></script>
 </head>
 
 
@@ -15,10 +17,45 @@
     <div class="header__nav"></div>
 
     <main class="inquire">
-        <div class="inquire-wrap"></div>
+
+        <div class="inquire-wrap">
+
+            <div class="title-wrap">
+                <h3>도매 문의하기</h3>
+                <p>도매를 원하시거나 관련 문의사항이 있으신 경우 하단 양식을 이용해서 문의해주시면 담당자가 확읜 후 최대한 빠르게 답변해드리겠습니다.</p>
+            </div>
+
+            <form id="contact_form" class="form-wrap" action="#" method="POST">
+                <div class="input-wrap">
+                    <label class="label" for="user_name">이름</label>
+                    <input class="input" name="user_name" type="text" value="" placeholder="이름을 입력해주세요." />
+                </div>
+                <div class="input-wrap">
+                    <label class="label" for="email">이메일</label>
+                    <input class="input" name="email" type="email" value="" placeholder="이메일을 입력해주세요."/>
+                </div>
+                <div class="input-wrap">
+                    <label class="label" for="message">전화번호</label>
+                    <input class="input" name="message" type="tel" placeholder="전화번호를 입력해주세요."></input>
+                </div>
+                <div class="input-wrap">
+                    <label class="label" for="message">문의내용</label>
+                    <textarea class="input" name="message" type="text" placeholder="문의내용을 입력해주세요."></textarea>
+                </div>
+                <div class="check-wrap">
+                    <div class="check-area">
+                        <input class="check-box" type="checkbox" name="check"/>
+                        <label class="label" for="check">개인정보 수집 이용에 동의합니다.</label>
+                    </div>
+                    <span>이용약관 →</span>
+                </div>
+                <input id="submit_button" class="submit-btn" type="submit" value="문의하기" />
+            </form>
+        </div>
     </main>
 
     <footer class="footer"></footer>
 
 </body>
+
 </html>

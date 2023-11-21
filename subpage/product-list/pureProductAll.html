@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="/subpage/product-list/css/sub.css"/><!-- 해당 페이지에만 적용 될 css -->
     <script src="/common/js/jquery-3.7.1.min.js"></script>
     <script src="/common/js/slick.min.js"></script>
-    <!-- <script src="/common/js/header-footer.js"></script> -->
 </head>
 
 
@@ -18,12 +17,12 @@
     <!-- WEB HEADER -->
     <header class="web-header">
         <div class="web-header-wrapper">
-            <h1 class="web-logo"><a href="../index.html">HIGHWAGYU</a></h1>
+            <h1 class="web-logo"><a href="/index.html">HIGHWAGYU</a></h1>
             <ul class="web-gnb">
-                <li><a href="/subpage/product-list/pureProductAll.html">Pure Wagyu 제품</a></li>
-                <li><a href="/subpage/product-list/JackCreekProductAll.html">JACK'S CREEK 제품</a></li>
-                <li><a href="/subpage/brand/BrandPureWagyu.html" class="active">브랜드소개</a></li>
-                <li><a href="#">도매문의</a></li>
+                <li><a href="/subpage/product-list/pureProductAll.html" class="active">Pure Wagyu 제품</a></li>
+                <li><a href="javascript:void(0);">JACK'S CREEK 제품</a></li>
+                <li><a href="/subpage/brand/BrandPureWagyu.html">브랜드소개</a></li>
+                <li><a href="/subpage/inquire/sub-inquire.html">도매문의</a></li>
                 <li><a href="https://high-marble.com/" target="_blank">소매구매</a></li>
             </ul>
         </div>
@@ -31,18 +30,36 @@
 
     <!-- MOBILE HEADER -->
     <div class="m-header">
-        <h1 class="logo">HIGHWAGYU</h1>
+        <h1 class="logo"><a href="/index.html">HIGHWAGYU</a></h1>
         <a href="#" class="mobile-menu-wrapper">
             <div class="mobile-menu"></div>
         </a>
         <div class="mobile-menu-overlay">
-            <h1 class="mobile-overlay-logo">The K Wagyu</h1>
+            <h1 class="mobile-overlay-logo"><a href="/index.html">HIGHWAGYU</a></h1>
             <ul class="mb-gnb">
-                <li class="mb-gnb-item"><a href="/subpage/product-list/pureProductAll.html">Pure Wagyu 제품</a></li>
-                <li class="mb-gnb-item"><a href="#">JACK'S CREEK 제품</a></li>
-                <li class="mb-gnb-item"><a href="/subpage/brand/BrandPureWagyu.html">브랜드소개</a></li>
-                <li class="mb-gnb-item"><a href="#">도매문의</a></li>
-                <li class="mb-gnb-item"><a href="https://high-marble.com/" target="_blank">소매구매</a></li>
+                <li><a href="/subpage/product-list/pureProductAll.html" class="active">Pure Wagyu 제품</a></li>
+                <li><a href="javascript:void(0);">JACK'S CREEK 제품</a></li>
+                <li><a href="/subpage/brand/BrandPureWagyu.html">브랜드소개</a></li>
+                <li><a href="/subpage/inquire/sub-inquire.html">도매문의</a></li>
+                <li><a href="https://high-marble.com/" target="_blank">소매구매</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- MOBILE HEADER -->
+    <div class="m-header">
+        <h1 class="logo"><a href="/index.html">HIGHWAGYU</a></h1>
+        <a href="#" class="mobile-menu-wrapper">
+            <div class="mobile-menu"></div>
+        </a>
+        <div class="mobile-menu-overlay">
+            <h1 class="mobile-overlay-logo"><a href="/index.html">HIGHWAGYU</a></h1>
+            <ul class="mb-gnb">
+                <li><a href="/subpage/product-list/pureProductAll.html" class="active">Pure Wagyu 제품</a></li>
+                <li><a href="javascript:void(0);">JACK'S CREEK 제품</a></li>
+                <li><a href="/subpage/brand/BrandPureWagyu.html">브랜드소개</a></li>
+                <li><a href="/subpage/inquire/sub-inquire.html">도매문의</a></li>
+                <li><a href="https://high-marble.com/" target="_blank">소매구매</a></li>
             </ul>
         </div>
     </div>
@@ -86,13 +103,32 @@
     </div>
 
 
-    <footer class="footer"></footer>
+    <footer class="footer">
+        <div class="container">
+    
+    
+            <div class="footer__upper">
+                <h1 class="foot-logo">HIGHWAGYU</h1>
+                <ul class="foot-link">
+                    <li><a href="javascript:void(0);">회사소개</a></li>
+                    <li><a href="javascript:void(0);">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer__under">
+                <p class="company-adress">17036 경기도 용인시 처인구 모현읍 파담로149번길 5 하이마블</p>
+                <p class="copyright">Copyright © 초이무역. All Rights Reserved</p>
+            </div>
+    
+    
+        </div></footer>
 
 
     <script>
         //items
         const products = [
-            { thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'Pure Wagyu', title: '양지', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
+            { thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'Pure Wagyu', title: '양지', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: '/subpage/product-list/allProduct/pureWagyuProduct/purePrd-001.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
             { thumb: '/subpage/product-list/img/thumb_product02.png', brand: 'Pure Wagyu', title: '갈비', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_2.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
             { thumb: '/subpage/product-list/img/thumb_product03.png', brand: 'Pure Wagyu', title: '갈비', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '30,000~', link: 'goods/goods_no_3.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
             { thumb: '/subpage/product-list/img/thumb_product04.png', brand: 'Pure Wagyu', title: '설도', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_4.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },

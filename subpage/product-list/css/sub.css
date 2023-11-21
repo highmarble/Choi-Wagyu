@@ -389,6 +389,7 @@
 .brand-container .content-box .content .brand-table{
     margin-top: 2rem;
     margin-bottom: 1rem;
+    width: 100%;
 }
 .brand-container .content-box .content .brand-table thead{
     background-color: #f5f5f5;;
