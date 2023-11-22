@@ -37,11 +37,11 @@
         <div class="mobile-menu-overlay">
             <h1 class="mobile-overlay-logo">The K Wagyu</h1>
             <ul class="mb-gnb">
-                <li class="mb-gnb-item"><a href="/subpage/product-list/pureProductAll.html">Pure Wagyu 제품</a></li>
-                <li class="mb-gnb-item"><a href="#">JACK'S CREEK 제품</a></li>
-                <li class="mb-gnb-item"><a href="/subpage/brand/BrandPureWagyu.html">브랜드소개</a></li>
-                <li class="mb-gnb-item"><a href="#">도매문의</a></li>
-                <li class="mb-gnb-item"><a href="https://high-marble.com/" target="_blank">소매구매</a></li>
+                <li><a href="/subpage/product-list/pureProductAll.html" class="active">Pure Wagyu 제품</a></li>
+                <li><a href="/subpage/product-list/jacksCreekProductAll.html">JACK'S CREEK 제품</a></li>
+                <li><a href="/subpage/brand/BrandPureWagyu.html">브랜드소개</a></li>
+                <li><a href="/subpage/inquire/sub-inquire.html">도매문의</a></li>
+                <li><a href="https://high-marble.com/" target="_blank">소매구매</a></li>
             </ul>
         </div>
     </div>
@@ -53,13 +53,13 @@
     </section>
     <section class="product">
         <ul class="product-btn">
-            <li><a class="active btn" id="all" href="/subpage/product-list/pureProductAll.html">전체</a></li>
-            <li><a class="btn" id="cold" href="/subpage/product-list/pureProductCold.html">냉장</a></li>
-            <li><a class="btn" id="frozen" href="/subpage/product-list/pureProductFrozen.html">냉동</a></li>
-            <li><a class="btn" id="mb6-7" href="/subpage/product-list/pureProductMb67.html">MB 6-7</a></li>
-            <li><a class="btn" id="mb8-9" href="/subpage/product-list/pureProductMb89.html">MB 8-9</a></li>
-            <li><a class="btn" id="roast" href="/subpage/product-list/pureProductRoast.html">구이</a></li>
-            <li><a class="btn" id="butchery" href="/subpage/product-list/pureProductButchery.html">정육</a></li>
+            <li><a class="active btn" id="all" href="/subpage/product-list/jacksCreekProductAll.html">전체</a></li>
+            <li><a class="btn" id="cold" href="/subpage/product-list/jacksCreekProductCold.html">냉장</a></li>
+            <li><a class="btn" id="frozen" href="/subpage/product-list/jacksCreekProductFrozen.html">냉동</a></li>
+            <li><a class="btn" id="mb6-7" href="/subpage/product-list/jacksCreekProductMB67.html">MB 6-7</a></li>
+            <li><a class="btn" id="mb8-9" href="/subpage/product-list/jacksCreekProductMB89.html">MB 8-9</a></li>
+            <li><a class="btn" id="roast" href="/subpage/product-list/jacksCreekProductRoast.html">구이</a></li>
+            <li><a class="btn" id="butchery" href="/subpage/product-list/jacksCreekProductbutchery.html">정육</a></li>
         </ul>
 
         <div class="spacer"></div>
@@ -91,25 +91,25 @@
     <script>
         //items
         const products = [
-            { thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '데클', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
-            { thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '갈비', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
-            { thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '척아이롤', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
-            { thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '척아이롤', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
-            { thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '척 테일 플랩', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
-            { thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '플랭크 스테이크', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
-            { thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '플랭크 스테이크', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
-            { thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '본갈비살', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
-            { thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '본갈비살', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
-            { thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '오이스터 블레이드', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
-            { thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '목심', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
-            { thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '목심', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
-            { thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '안창살', storage: '냉장' , marble: 'UNKNOWN', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'UNKNOWN', filter3: 'roast' },
-            { thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '삼각살', storage: '냉장' , marble: 'UNKNOWN', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'UNKNOWN', filter3: 'roast' },
-            { thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '업진안살', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
-            { thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '진갈비살', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
-            { thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '립아이 캡', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
-            { thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '립아이 캡', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
-            { thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '양지늑간', storage: '냉장' , marble: 'UNKNOWN', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'UNKNOWN', filter3: 'roast' }
+            { id: 1, thumb: '/subpage/product-list/img/goods/jacks/01_deckle_thumb.png', brand: 'JACK&rsquo;S CREEK', title: '데클', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
+            { id: 2, thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '갈비', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
+            { id: 3, thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '척아이롤', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
+            { id: 4, thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '척아이롤', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
+            { id: 5, thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '척 테일 플랩', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
+            { id: 6, thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '플랭크 스테이크', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
+            { id: 7, thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '플랭크 스테이크', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
+            { id: 8, thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '본갈비살', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
+            { id: 9, thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '본갈비살', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
+            { id: 10, thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '오이스터 블레이드', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
+            { id: 11, thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '목심', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
+            { id: 12, thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '목심', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
+            { id: 13, thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '안창살', storage: '냉장' , marble: 'UNKNOWN', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'UNKNOWN', filter3: 'roast' },
+            { id: 14, thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '삼각살', storage: '냉장' , marble: 'UNKNOWN', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'UNKNOWN', filter3: 'roast' },
+            { id: 15, thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '업진안살', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
+            { id: 16, thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '진갈비살', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
+            { id: 17, thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '립아이 캡', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
+            { id: 18, thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '립아이 캡', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
+            { id: 19, thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'JACK&rsquo;S CREEK', title: '양지늑간', storage: '냉장' , marble: 'UNKNOWN', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'UNKNOWN', filter3: 'roast' }
         ]
         //count
         const objectCount = products.length;
