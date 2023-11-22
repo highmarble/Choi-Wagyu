@@ -556,6 +556,7 @@
         font-weight: 600;
         padding: 1rem;
         border-radius: 6px;
+        text-align: center;
     }
     .slick-list{
         border-radius: 1rem;
