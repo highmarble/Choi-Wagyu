@@ -20,13 +20,31 @@
             <h1 class="web-logo"><a href="/index.html">HIGHWAGYU</a></h1>
             <ul class="web-gnb">
                 <li><a href="/subpage/product-list/pureProductAll.html" class="active">Pure Wagyu 제품</a></li>
-                <li><a href="javascript:void(0);">JACK'S CREEK 제품</a></li>
+                <li><a href="/subpage/product-list/jacksCreekProductAll.html">JACK'S CREEK 제품</a></li>
                 <li><a href="/subpage/brand/BrandPureWagyu.html">브랜드소개</a></li>
                 <li><a href="/subpage/inquire/sub-inquire.html">도매문의</a></li>
                 <li><a href="https://high-marble.com/" target="_blank">소매구매</a></li>
             </ul>
         </div>
     </header>
+
+    <!-- MOBILE HEADER -->
+    <div class="m-header">
+        <h1 class="logo"><a href="/index.html">HIGHWAGYU</a></h1>
+        <a href="#" class="mobile-menu-wrapper">
+            <div class="mobile-menu"></div>
+        </a>
+        <div class="mobile-menu-overlay">
+            <h1 class="mobile-overlay-logo"><a href="/index.html">HIGHWAGYU</a></h1>
+            <ul class="mb-gnb">
+                <li><a href="/subpage/product-list/pureProductAll.html" class="active">Pure Wagyu 제품</a></li>
+                <li><a href="/subpage/product-list/jacksCreekProductAll.html">JACK'S CREEK 제품</a></li>
+                <li><a href="/subpage/brand/BrandPureWagyu.html">브랜드소개</a></li>
+                <li><a href="/subpage/inquire/sub-inquire.html">도매문의</a></li>
+                <li><a href="https://high-marble.com/" target="_blank">소매구매</a></li>
+            </ul>
+        </div>
+    </div>
 
     <!-- MOBILE HEADER -->
     <div class="m-header">
@@ -94,7 +112,7 @@
                 <ul class="foot-link">
                     <li><a href="javascript:void(0);">회사소개</a></li>
                     <li><a href="javascript:void(0);">이용약관</a></li>
-                    <li><a href="javascript:void(0);">개인정보처리방침</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
                 </ul>
             </div>
             
@@ -110,16 +128,16 @@
     <script>
         //items
         const products = [
-            { thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'Pure Wagyu', title: '양지', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_1.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
-            { thumb: '/subpage/product-list/img/thumb_product02.png', brand: 'Pure Wagyu', title: '갈비', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_2.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
-            { thumb: '/subpage/product-list/img/thumb_product03.png', brand: 'Pure Wagyu', title: '갈비', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '30,000~', link: 'goods/goods_no_3.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
-            { thumb: '/subpage/product-list/img/thumb_product04.png', brand: 'Pure Wagyu', title: '설도', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_4.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
-            { thumb: '/subpage/product-list/img/thumb_product05.jpg', brand: 'Pure Wagyu', title: '설도', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_5.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
-            { thumb: '/subpage/product-list/img/thumb_product06.png', brand: 'Pure Wagyu', title: '앞다리', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '30,000~', link: 'goods/goods_no_6.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
-            { thumb: '/subpage/product-list/img/thumb_product07.png', brand: 'Pure Wagyu', title: '설도', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '30,000~', link: 'goods/goods_no_7.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
-            { thumb: '/subpage/product-list/img/thumb_product08.jpg', brand: 'Pure Wagyu', title: '설도', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '30,000~', link: 'goods/goods_no_8.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
-            { thumb: '/subpage/product-list/img/thumb_product09.png', brand: 'Pure Wagyu', title: '우둔', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_9.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
-            { thumb: '/subpage/product-list/img/thumb_product10.jpg', brand: 'Pure Wagyu', title: '숏늑간', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '30,000~', link: 'goods/goods_no_10.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' }
+            { id: 1, thumb: '/subpage/product-list/img/thumb_product01.png', brand: 'Pure Wagyu', title: '양지', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: '/subpage/product-list/allProduct/pureWagyuProduct/purePrd-001.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
+            { id: 2, thumb: '/subpage/product-list/img/thumb_product02.png', brand: 'Pure Wagyu', title: '갈비', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: '/subpage/product-list/allProduct/pureWagyuProduct/purePrd-002.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
+            { id: 3, thumb: '/subpage/product-list/img/thumb_product03.png', brand: 'Pure Wagyu', title: '갈비', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '30,000~', link: 'goods/goods_no_3.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
+            { id: 4, thumb: '/subpage/product-list/img/thumb_product04.png', brand: 'Pure Wagyu', title: '설도', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_4.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
+            { id: 5, thumb: '/subpage/product-list/img/thumb_product05.jpg', brand: 'Pure Wagyu', title: '설도', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_5.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
+            { id: 6, thumb: '/subpage/product-list/img/thumb_product06.png', brand: 'Pure Wagyu', title: '앞다리', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '30,000~', link: 'goods/goods_no_6.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
+            { id: 7, thumb: '/subpage/product-list/img/thumb_product07.png', brand: 'Pure Wagyu', title: '설도', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '30,000~', link: 'goods/goods_no_7.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
+            { id: 8, thumb: '/subpage/product-list/img/thumb_product08.jpg', brand: 'Pure Wagyu', title: '설도', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '30,000~', link: 'goods/goods_no_8.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
+            { id: 9, thumb: '/subpage/product-list/img/thumb_product09.png', brand: 'Pure Wagyu', title: '우둔', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '30,000~', link: 'goods/goods_no_9.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
+            { id: 10, thumb: '/subpage/product-list/img/thumb_product10.jpg', brand: 'Pure Wagyu', title: '숏늑간', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '30,000~', link: 'goods/goods_no_10.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' }
         ]
         //count
         const objectCount = products.length;
