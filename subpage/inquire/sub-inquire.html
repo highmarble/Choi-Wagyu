@@ -44,19 +44,21 @@
                     <textarea class="input textarea" name="message" type="text" placeholder="문의내용을 입력해주세요."
                         required></textarea>
                 </div>
-                <div class="check-wrap">
-                    <div class="check-area">
-                        <input id="checkBox" class="check-box" type="checkbox" name="agree" required />
-                        <label class="label" for="check">개인정보 수집 이용에 동의합니다.</label>
-                    </div>
-                    <span class="agreement">이용약관 →</span>
-                </div>
-                <input id="submit_button" class="submit-btn" type="submit" value="문의하기" />
 
-                <div style="display:none" class="thankyou_message">
+                <div class="submit-check-wrap">
+                    <div class="check-wrap">
+                        <div class="check-area">
+                            <input id="checkBox" class="check-box" type="checkbox" name="agree" required />
+                            <label class="label" for="check">개인정보 수집 이용에 동의합니다.</label>
+                        </div>
+                        <span class="agreement">이용약관 →</span>
+                    </div>
+                    <input id="submit_button" class="submit-btn" type="submit" value="문의하기" />    
+                </div>
+                
+                <div class="thankyou_message">
                     <!-- You can customize the thankyou message by editing the code below -->
-                    <h2><em>Thanks</em> for contacting us! We will get back to you soon!
-                    </h2>
+                    <p>⭐문의해주셔서 감사합니다⭐<br> 담당자를 통해 빠른 시일 내에 회신 혹은 연락드리겠습니다.</p>
                 </div>
 
             </form>
@@ -67,6 +69,13 @@
 
 
     <script data-cfasync="false" type="text/javascript" src="/subpage/inquire/js/form-submission-handler.js"></script>
+    <script>
+        $(function(){
+            $('.submit-btn').on('click', function(){
+                $(this).addClass('on');
+            });
+        });
+    </script>
 </body>
 
 </html>
