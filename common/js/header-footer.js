@@ -4,11 +4,11 @@ $(function () {
     $(window).scroll(function () {
         let winTop = $(window).scrollTop();
 
-        if (winTop > 20) {
+        if (winTop > 1) {
             $('.web-header').css({ 'background-color': '#fff', 'border-bottom': '1px solid #ddd', 'transition': '.2s all' });
             $('.web-gnb, .web-logo').css({ 'color': '#000' });
         } else {
-            $('.web-header').css({ 'background-color': '#000', 'border-bottom': 'none', 'color': '#fff', 'transition': '.2s all' });
+            $('.web-header').css({ 'background-color': 'rgba(0,0,0,0)', 'border-bottom': 'none', 'color': '#fff', 'transition': '.2s all' });
             $('.web-gnb, .web-logo').css({ 'color': '#fff' });
         }
     });
