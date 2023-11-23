@@ -19,6 +19,9 @@
 .purewagyu-cover{
     background-image: url(../img/brand-purewagyu-cover.jpg);
 }
+.jackscreek-cover{
+    background-image: url(../img/brand-jackscreek-cover.jpg);
+}
 
 .top-visual h2 {
     color: #fff;
@@ -357,6 +360,17 @@
 .brand-container .content-box{
     margin-bottom: 5rem;
 }
+.brand-top-cont h1{
+    font-size: 3.5rem;
+    font-weight: 600;
+    padding:10px 0 20px 0;
+    margin-bottom: 2rem;
+}
+.brand-top-cont img{
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
 .brand-container .content-box .title{
     font-size: 1.3rem;
     font-weight: 600;
@@ -632,6 +646,7 @@
     .brand-container .content-box .content img{
         width: 100%;
         margin-top: 2rem;
+        border-radius: 1rem;
     }
     .brand-container .content-box .marble-score-pic{
         display: flex;
