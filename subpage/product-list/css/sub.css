@@ -10,7 +10,7 @@
 
 .top-visual {
     width: 100%;
-    height: 200px;
+    height: 260px;
     background-image: url(../img/pure_wagyu_intro-02.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -25,7 +25,7 @@
 
 .top-visual h2 {
     color: #fff;
-    padding-top: 130px;
+    padding-top: 150px;
     padding-left: 20px;
     font-size: 1.3rem;
     font-weight: 300;
