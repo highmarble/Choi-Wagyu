@@ -177,7 +177,9 @@
 .goods-prd-wrapper {
     padding-top: 30px;
 }
-
+.goods-prd-items{
+    margin-top: 30px;
+}
 .prd-location {
     padding: 0 20px;
     color: #888;

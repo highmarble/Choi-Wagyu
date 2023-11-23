@@ -18,6 +18,7 @@
     justify-content: space-between;
     background: white;
     border-bottom: 1px solid #bcbcbc;
+    z-index: 9999;
 }
 
 .m-header.prd-list {
