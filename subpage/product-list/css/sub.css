@@ -361,10 +361,9 @@
     margin-bottom: 5rem;
 }
 .brand-top-cont h1{
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 600;
     padding:10px 0 20px 0;
-    margin-bottom: 2rem;
 }
 .brand-top-cont img{
     border-radius: 1rem;
@@ -621,6 +620,10 @@
         max-width: 1200px;
         margin: 0 auto;
         padding-top: 9rem;
+    }
+    .brand-top-cont h1{
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
     }
     .brand-container .content-box{
         display: flex;
