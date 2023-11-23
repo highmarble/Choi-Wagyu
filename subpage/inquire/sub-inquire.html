@@ -8,13 +8,45 @@
     <link rel="stylesheet" href="/common/css/app.css" />
     <link rel="stylesheet" href="/subpage/inquire/css/inquire.css" />
     <script src="/common/js/jquery-3.7.1.min.js"></script>
-    <script src="/common/js/header-footer.js"></script>
 </head>
 
 
 <body>
 
-    <div class="header__nav"></div>
+    <div class="header__nav">
+        <header class="web-header">
+            <div class="web-header-wrapper">
+
+                <h1 class="web-logo">
+                    <a href="/index.html">HIGHWAGYU</a>
+                </h1>
+
+                <ul class="web-gnb">
+                    <li><a href="/subpage/product-list/pureProductAll.html">Pure Wagyu 제품</a></li>
+                    <li><a href="/subpage/product-list/jacksCreekProductAll.html">JACK'S CREEK 제품</a></li>
+                    <li><a href="/subpage/brand/BrandPureWagyu.html">브랜드소개</a></li>
+                    <li><a href="/subpage/inquire/sub-inquire.html">도매문의</a></li>
+                    <li><a href="https://high-marble.com/">소매구매</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="m-header">
+            <h1 class="logo"><a href="/index.html">HIGHWAGYU</a></h1>
+            <a href="#" class="mobile-menu-wrapper">
+                <div class="mobile-menu"></div>
+            </a>
+            <div class="mobile-menu-overlay">
+                <h1 class="mobile-overlay-logo"><a href="/index.html">HIGHWAGYU</a></h1>
+                <ul class="mb-gnb">
+                    <li><a href="/subpage/product-list/pureProductAll.html" class="active">Pure Wagyu 제품</a></li>
+                    <li><a href="/subpage/product-list/jacksCreekProductAll.html">JACK'S CREEK 제품</a></li>
+                    <li><a href="/subpage/brand/BrandPureWagyu.html">브랜드소개</a></li>
+                    <li><a href="/subpage/inquire/sub-inquire.html">도매문의</a></li>
+                    <li><a href="https://high-marble.com/" target="_blank">소매구매</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
     <main class="inquire">
         <div class="inquire-wrap">
@@ -71,9 +103,35 @@
     <script data-cfasync="false" type="text/javascript" src="/subpage/inquire/js/form-submission-handler.js"></script>
     <script>
         $(function(){
+            $('.footer').load('/common/header-footer/footer.html');
+
             $('.submit-btn').on('click', function(){
                 $(this).addClass('on');
             });
+
+            //nav
+            $(window).scroll(function () {
+                let winTop = $(window).scrollTop();
+
+                if (winTop > 1) {
+                    $('.web-header').css({ 'background-color': '#fff', 'border-bottom': '1px solid #ddd', 'transition': '.2s all' });
+                    $('.web-gnb, .web-logo').css({ 'color': '#000' });
+                } else {
+                    $('.web-header').css({ 'background-color': 'rgba(0,0,0,0)', 'border-bottom': 'none', 'color': '#fff', 'transition': '.2s all' });
+                    $('.web-gnb, .web-logo').css({ 'color': '#fff' });
+                }
+            });
+
+            //mobile nav
+            $('.mobile-menu-wrapper').on('click', function () {
+                console.log('click')
+                $('.mobile-menu').toggleClass('animate');
+                $('.mobile-menu-overlay').toggleClass('visible');
+            })
+            $('.mobile-menu-overlay > ul > li > a').on('click', function () {
+                $('.mobile-menu').removeClass('animate');
+                $('.mobile-menu-overlay').removeClass('visible');
+            })
         });
     </script>
 </body>
