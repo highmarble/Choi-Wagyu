@@ -1,10 +1,15 @@
 /* header */
-
+.header__nav {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+}
 .web-header {
     display: none;
 }
 .m-header {
-    position: fixed;
     display: flex;
     width: 100%;
     height: 60px;
@@ -12,7 +17,6 @@
     justify-content: space-between;
     background: white;
     border-bottom: 1px solid #bcbcbc;
-    z-index: 9999;
 }
 
 .m-header.prd-list {
@@ -23,6 +27,10 @@
 .m-header .logo {
     display: flex;
     align-items: center;
+}
+.m-header .logo > a {
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .prd-list-icon {
@@ -48,6 +56,10 @@
     height: 60px;
     padding: 0 20px;
     align-items: center;
+}
+.mobile-overlay-logo > a {
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .mb-gnb-item {
@@ -79,14 +91,15 @@
 
 .mobile-menu-overlay {
     z-index: 1337;
-    display: none;
     width: 100%;
-    height: 100vh;
+    height: 0;
+    overflow: hidden;
     position: fixed;
     background: white;
     top: 0;
     left: 0;
     text-align: center;
+    transition: all .5s;
 }
 
 .mobile-menu.animate {
@@ -125,22 +138,34 @@
 .mb-gnb{
     margin-top: 80px;
 }
+.mb-gnb > li {
+    padding: 1.5rem 0;
+}
+.mb-gnb > li > a {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 1.5rem 0;
+}
 .visible {
-    display: block !important;
+    height: 100vh;
 }
 @media all and (min-width:1024px) {
+    .header__nav {
+        width: 100%;
+        height: 100px;
+        top: 0;
+    }
     .m-header {
         display: none;
     }
 
     .web-header {
         display: flex;
-        position: fixed;
         width: 100%;
         height: 100px;
         justify-content: center;
         align-items: center;
-        z-index: 9999;
     }
 
     .web-header-goods{
