@@ -4,8 +4,17 @@
     font-weight: 400, 600, 800;
     font-style: normal;
 }
-.fade{
+.fade-class {
+    position: relative;
+    left: 200px;
     opacity: 0;
+    transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s linear;
+}
+
+.fade-in {
+    transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s linear;
+    left: 0px;
+    opacity: 1;
 }
 
 .top-visual {
@@ -354,7 +363,11 @@
 }
 
 /* 브랜드소개 */
-
+.brand-intro{
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2rem;
+}
 .brand-container{
     padding: 20px;
     padding-top: 80px;
@@ -368,7 +381,6 @@
     padding:10px 0 20px 0;
 }
 .brand-top-cont img{
-    border-radius: 1rem;
     margin-bottom: 2rem;
     width: 100%;
 }
@@ -651,7 +663,6 @@
     .brand-container .content-box .content img{
         width: 100%;
         margin-top: 2rem;
-        border-radius: 1rem;
     }
     .brand-container .content-box .marble-score-pic{
         display: flex;
