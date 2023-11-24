@@ -36,8 +36,8 @@
     color: #fff;
     padding-top: 150px;
     padding-left: 20px;
-    font-size: 1.3rem;
-    font-weight: 300;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .product-btn {
@@ -380,9 +380,28 @@
 /* 브랜드소개 */
 .brand-intro{
     text-align: center;
-    padding: 20px;
     font-size: 1.2rem;
 }
+.brand-intro h1{
+    padding: 30px 20px;
+    font-weight: 600;
+}
+.brand-btn-wrap{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.brand-btn-wrap .brand-btn{
+    color: #222;
+    padding: 1rem;
+    border: 1px solid #e5e5e5;
+    cursor: pointer;
+}
+.brand-btn-wrap .brand-btn.active{
+    color: #fff;
+    background-color: #222;
+}
+
 .brand-container{
     padding: 20px;
     padding-top: 80px;
@@ -643,6 +662,15 @@
         padding: 0;
     }
     /* 브랜드소개 */
+    .brand-intro h1{
+        padding: 80px 20px;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    .brand-btn-wrap .brand-btn{
+        padding: 1.5rem 2rem;
+        font-size: 1.3rem;
+    }
     .brand-container{
         position: relative;
         width: 100%;
