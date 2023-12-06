@@ -60,15 +60,15 @@
                 action="https://script.google.com/macros/s/AKfycbwiT2CfAG-lZkbWX9PHmgqO3XHb-VnpnRfn7-DeCshpU4MSm5qGKpuITxZ3RWT7vdWr/exec"
                 method="POST">
                 <div class="input-wrap">
-                    <label class="label" for="senderName">이름</label>
+                    <label class="label" for="senderName">*이름</label>
                     <input class="input" name="senderName" type="text" value="" placeholder="이름을 입력해주세요." required />
                 </div>
                 <div class="input-wrap">
-                    <label class="label" for="email">이메일</label>
+                    <label class="label" for="email">*이메일</label>
                     <input class="input" name="email" type="email" value="" placeholder="이메일을 입력해주세요." required />
                 </div>
                 <div class="input-wrap">
-                    <label class="label" for="tel">전화번호</label>
+                    <label class="label" for="tel">*전화번호</label>
                     <input class="input" name="tel" type="tel" placeholder="전화번호를 입력해주세요." required>
                 </div>
                 <div class="input-wrap">
@@ -81,7 +81,7 @@
                     <div class="check-wrap">
                         <div class="check-area">
                             <input id="checkBox" class="check-box" type="checkbox" name="agree" required />
-                            <label class="label" for="check">개인정보 수집 이용에 동의합니다.</label>
+                            <label class="label" for="check">(팰수) 개인정보 수집 이용에 동의합니다.</label>
                         </div>
                         <span class="agreement">이용약관 →</span>
                     </div>
@@ -90,12 +90,44 @@
                 
                 <div class="thankyou_message">
                     <!-- You can customize the thankyou message by editing the code below -->
-                    <p>⭐문의해주셔서 감사합니다⭐<br> 담당자를 통해 빠른 시일 내에 회신 혹은 연락드리겠습니다.</p>
+                    <p>문의해주셔서 감사합니다.<br> 담당자를 통해 빠른 시일 내에 회신 혹은 연락드리겠습니다.</p>
                 </div>
 
             </form>
         </div>
     </main>
+
+    <div class="modal consent_to_collection_inquiry">
+        <div class="inquiry-wrap">
+            <div class="modal_close">
+                <span>닫기</span>
+            </div>
+            <ol>
+                <li><h4 class="li_title"><b>1. 수집하는 개인정보 항목 및 수집 · 이용 목적</h4></b>
+                    <table>
+                    <tbody>
+                        <tr class="cl">
+                            <td><p><b>수집 방법</b></p></td>
+                            <td><p><b>수집 항목</b></p></td>
+                            <td><p><b>수집 및 이용 목적</b></p></td>
+                        </tr>
+                        <tr>
+                            <td><p>문의사항 접수 및 답변 전달</p></td>
+                            <td><p>이름, 이메일, 전화번호</p></td>
+                            <td><p>고객 문의 응대</p></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </li>
+                <li><h4 class="li_title"><b>2. 개인정보 보유 기간</b></h4>
+                    <p class="li_text">수집일로부터 1년</p>
+                </li>
+                <li><h4 class="li_title"><b>3. 동의 거부 시 불이익</b></h4>
+                    <p class="li_text">수집하는 개인정보에 대해 동의하지 않거나 개인정보를 기재하지 않음으로써 본 동의에 거부할 수 있습니다. 다만, 이 경우에는 문의하기 서비스 이용이 제한 될 수 있습니다.</p>
+                </li>
+            </ol>
+        </div>
+    </div>
 
     <footer class="footer"></footer>
 
@@ -132,7 +164,16 @@
                 $('.mobile-menu').removeClass('animate');
                 $('.mobile-menu-overlay').removeClass('visible');
             })
+
+            //modal
+            $('.agreement').on('click', function () {
+                $('.modal').show();
+            });
+            $('.modal_close').on('click', function () {
+                $('.modal').hide();
+            });
         });
+
     </script>
 </body>
 
