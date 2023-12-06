@@ -247,7 +247,10 @@ footer .container {
 }
 .foot-link a {
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 300;
+}
+.foot-link li:last-child a {
+    font-weight: 600;
 }
 .foot-link a:hover {
     text-decoration: underline;
@@ -262,6 +265,7 @@ footer .container {
 .footer__under > p {
     font-size: 1rem;
     font-weight: 300;
+    color: #bbb;
 }
 .company-adress {
     word-break: keep-all;
