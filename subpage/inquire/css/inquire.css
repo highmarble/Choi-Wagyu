@@ -115,11 +115,16 @@
     margin: 0;
 }
 .agreement {
+    display: inline-block;
     font-size: 1rem;
     font-weight: 300;
     line-height: 100%;
-    text-decoration-line: underline;
     color: #888; 
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+}
+.agreement:hover {
+    border-bottom: 1px solid #888;
 }
 
 .submit-btn {
@@ -182,5 +187,95 @@
     }
     .agreement {
         margin-left: 24px;
+    }
+}
+
+
+/* 개인정보 수집,이용 모달 */
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inquiry-wrap {
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    background-color: #fff;
+    padding: 2rem 4rem 5rem 4rem;
+}
+.modal_close {
+    text-align: right;
+    margin-bottom: 2rem;
+}
+.modal_close span {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: .5rem;
+    cursor: pointer;
+}
+.inquiry-wrap ol {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.inquiry-wrap table {
+    width: 100%;
+}
+.inquiry-wrap tbody td {
+    font-size: 1rem;
+    line-height: 130%;
+    border: 1px solid #ddd;
+    padding: 1rem;
+}
+.inquiry-wrap tbody .cl td {
+    font-weight: 600;
+    background-color: #eee;
+}
+.li_title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.li_text {
+    font-size: 1.25rem;
+    font-size: 500;
+    line-height: 140%;
+    word-break: keep-all;
+    padding-left: 1.5rem;
+}
+@media all and (max-width:768px) {
+    .modal {
+        padding: 60px 1rem 0 1rem;
+    }
+    .inquiry-wrap {
+        width: 100%;
+        height: 560px;
+        padding: 2rem;
+        overflow-y: scroll;
+    }
+    .modal_close span {
+        font-size: 1.25rem;
+    }
+    .inquiry-wrap tbody td {
+        font-size: 14px;
+        padding: .5rem;
+    }
+    .li_title {
+        font-size: 1.25rem;
+        margin-bottom: .5rem;
+    }
+    .li_text {
+        font-size: 1rem;
+        word-break: break-all;
     }
 }
