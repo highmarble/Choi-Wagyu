@@ -335,7 +335,7 @@
 }
 #tab01>img{
     width: 100%;
-    margin-bottom: 4rem;
+    margin-bottom: 20px;
 }
 #tab01 .info {
     width: 100%;
@@ -632,6 +632,9 @@
     }
     .tab{
         margin-top: 80px;
+    }
+    #tab01>img{
+        margin-bottom: 2rem;
     }
     #tab02{
         padding: 25px;
