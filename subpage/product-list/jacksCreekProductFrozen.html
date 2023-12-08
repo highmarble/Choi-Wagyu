@@ -64,7 +64,8 @@
 
         <div class="spacer"></div>
         <div style="max-width: 1200px; margin: 0 auto; overflow: hidden;">
-            <p class="prd-count">총 <span id="objectCountDiv" style="font-weight: bold;"></span>개의 상품이 있습니다.</p>
+            <!-- <p class="prd-count">총 <span id="objectCountDiv" style="font-weight: bold;"></span>개의 상품이 있습니다.</p> -->
+            <p class="prd-count">상품 준비중입니다.</p>
             <ul id="items">
             </ul>
         </div>
@@ -108,29 +109,7 @@
 
     <script>
         //items
-        const products = [
-            { id: 0, thumb: '/subpage/product-list/img/goods/jacks/00_deckle_thumb.png', brand: 'JACK&rsquo;S CREEK', title: '데클', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '34,000~', link: '/subpage/product-list/allProduct/jacksCreekProduct/jacksPrd-000.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
-            { id: 1, thumb: '/subpage/product-list/img/goods/jacks/01_deckle_thumb.png', brand: 'JACK&rsquo;S CREEK', title: '데클', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '36,000~', link: '/subpage/product-list/allProduct/jacksCreekProduct/jacksPrd-001.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
-            { id: 2, thumb: '/subpage/product-list/img/goods/jacks/02_intercostal_thumb.png', brand: 'JACK&rsquo;S CREEK', title: '롱늑간', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '36,000~', link: '/subpage/product-list/allProduct/jacksCreekProduct/jacksPrd-002.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
-            { id: 3, thumb: '/subpage/product-list/img/goods/jacks/03_chuckeyeroll_thumb.png', brand: 'JACK&rsquo;S CREEK', title: '윗등심', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '34,000~', link: '/subpage/product-list/allProduct/jacksCreekProduct/jacksPrd-003.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
-            { id: 4, thumb: '/subpage/product-list/img/goods/jacks/04_chuckeyeroll_thumb.png', brand: 'JACK&rsquo;S CREEK', title: '윗등심', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '37,000~', link: '/subpage/product-list/allProduct/jacksCreekProduct/jacksPrd-004.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
-            { id: 5, thumb: '/subpage/product-list/img/goods/jacks/05_chucktailflap_02_thumb.png', brand: 'JACK&rsquo;S CREEK', title: '살치', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '75,000~', link: '/subpage/product-list/allProduct/jacksCreekProduct/jacksPrd-005.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
-            { id: 6, thumb: '/subpage/product-list/img/goods/jacks/06_flanksteak_thumb.png', brand: 'JACK&rsquo;S CREEK', title: '플랭크 스테이크', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '32,000~', link: '/subpage/product-list/allProduct/jacksCreekProduct/jacksPrd-006.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
-            { id: 7, thumb: '/subpage/product-list/img/goods/jacks/07_flanksteak_thumb.png', brand: 'JACK&rsquo;S CREEK', title: '플랭크 스테이크', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '35,000~', link: '/subpage/product-list/allProduct/jacksCreekProduct/jacksPrd-007.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
-            { id: 8, thumb: '/subpage/product-list/img/goods/jacks/08_shortribmeat_thumb.png', brand: 'JACK&rsquo;S CREEK', title: '진갈비', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '73,000~', link: '/subpage/product-list/allProduct/jacksCreekProduct/jacksPrd-008.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
-            { id: 9, thumb: '/subpage/product-list/img/goods/jacks/09_chuckribmeat_thumb.png', brand: 'JACK&rsquo;S CREEK', title: '갈비본살', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '48,000~', link: '/subpage/product-list/allProduct/jacksCreekProduct/jacksPrd-009.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
-            { id: 10, thumb: '/subpage/product-list/img/goods/jacks/10_oysterblade_thumb.png', brand: 'JACK&rsquo;S CREEK', title: '부채', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '48,000~', link: '/subpage/product-list/allProduct/jacksCreekProduct/jacksPrd-010.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
-            { id: 11, thumb: '/subpage/product-list/img/goods/jacks/11_neckroll_thumb.png', brand: 'JACK&rsquo;S CREEK', title: '끝목심', storage: '냉장' , marble: 'MB 6-7', usage: '정육' , price: '11,500~', link: '/subpage/product-list/allProduct/jacksCreekProduct/jacksPrd-011.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'butchery' },
-            { id: 12, thumb: '/subpage/product-list/img/goods/jacks/12_neckroll_thumb.png', brand: 'JACK&rsquo;S CREEK', title: '끝목심', storage: '냉장' , marble: 'MB 8-9', usage: '정육' , price: '12,000~', link: '/subpage/product-list/allProduct/jacksCreekProduct/jacksPrd-012.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'butchery' },
-            { id: 13, thumb: '/subpage/product-list/img/goods/jacks/13_beffthinskirt_thumb.png', brand: 'JACK&rsquo;S CREEK', title: '안창살', storage: '냉장' , marble: 'UNKNOWN', usage: '구이' , price: '45,000~', link: '/subpage/product-list/allProduct/jacksCreekProduct/jacksPrd-013.html' , filter1: 'cold', filter2: 'UNKNOWN', filter3: 'roast' },
-            { id: 14, thumb: '/subpage/product-list/img/goods/jacks/14_tritip_thumb.png', brand: 'JACK&rsquo;S CREEK', title: '삼각살', storage: '냉장' , marble: 'UNKNOWN', usage: '구이' , price: '45,000~', link: '/subpage/product-list/allProduct/jacksCreekProduct/jacksPrd-014.html' , filter1: 'cold', filter2: 'UNKNOWN', filter3: 'roast' },
-            { id: 15, thumb: '/subpage/product-list/img/goods/jacks/15_insideskirt_thumb.png', brand: 'JACK&rsquo;S CREEK', title: '치마양지', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '24,000~', link: '/subpage/product-list/allProduct/jacksCreekProduct/jacksPrd-015.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
-            { id: 16, thumb: '/subpage/product-list/img/goods/jacks/16_chuckribmeat_thumb.png', brand: 'JACK&rsquo;S CREEK', title: '갈비본살', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '46,000~', link: '/subpage/product-list/allProduct/jacksCreekProduct/jacksPrd-016.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
-            { id: 17, thumb: '/subpage/product-list/img/goods/jacks/17_ribeyecap_thumb.png', brand: 'JACK&rsquo;S CREEK', title: '립캡', storage: '냉장' , marble: 'MB 6-7', usage: '구이' , price: '48,000~', link: '/subpage/product-list/allProduct/jacksCreekProduct/jacksPrd-017.html' , filter1: 'cold', filter2: 'mb6-7', filter3: 'roast' },
-            { id: 18, thumb: '/subpage/product-list/img/goods/jacks/18_ribeyecap_thumb.png', brand: 'JACK&rsquo;S CREEK', title: '립캡', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '50,000~', link: '/subpage/product-list/allProduct/jacksCreekProduct/jacksPrd-018.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
-            { id: 19, thumb: '/subpage/product-list/img/goods/jacks/19_ribfingers_thumb.png', brand: 'JACK&rsquo;S CREEK', title: '숏늑간', storage: '냉장' , marble: 'MB 8-9', usage: '구이' , price: '23,000~', link: '/subpage/product-list/allProduct/jacksCreekProduct/jacksPrd-019.html' , filter1: 'cold', filter2: 'mb8-9', filter3: 'roast' },
-            
-        ]
+        
         //count
         const objectCount = products.length;
         const objectCountDiv = document.getElementById("objectCountDiv");
