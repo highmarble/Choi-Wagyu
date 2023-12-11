@@ -84,27 +84,7 @@
         </button>
     </div>
 
-
-    <footer class="footer">
-        <div class="container">
-    
-    
-            <div class="footer__upper">
-                <h1 class="foot-logo"><a href="/index.html">HIWAGYU</a></h1>
-                <ul class="foot-link">
-                    <li><a href="javascript:void(0);">회사소개</a></li>
-                    <li><a href="/subpage/privacy_policy/privacy_policy.html">개인정보처리방침</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer__under">
-                <p class="company-adress">17036 경기도 용인시 처인구 모현읍 파담로149번길 5 하이마블</p>
-                <p class="copyright">Copyright © 초이무역. All Rights Reserved</p>
-            </div>
-    
-    
-        </div></footer>
-
+    <footer class="footer"></footer>
 
     <script>
         //items
@@ -135,6 +115,10 @@
         const objectCount = products.length;
         const objectCountDiv = document.getElementById("objectCountDiv");
         objectCountDiv.innerHTML = objectCount;
+
+        $(function () {
+            $('.footer').load('/common/header-footer/footer.html');
+        });
     </script>
     <script src="/subpage/product-list/js/sub.js"></script>
 
