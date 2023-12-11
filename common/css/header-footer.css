@@ -260,21 +260,41 @@ footer .container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.5rem;
+    gap: 0.7rem;
+    color: #fff;
+    margin-top: 1.5rem;
 }
-.footer__under > p {
-    font-size: 1rem;
-    font-weight: 300;
+.footer__under > dl{
+    display: flex;
+}
+.footer__under__wrap .company-info dt:first-child{
+    width: 140px;
     color: #bbb;
+}
+.footer__under__wrap .company-contact dt:first-child{
+    width: 80px;
+    color: #bbb;
+}
+.footer__under > dl > dt:last-child{
+    font-weight: 200;
 }
 .company-adress {
     word-break: keep-all;
     line-height: 120%;
 }
+.copyright{
+    color: #bbb;
+}
 @media all and (min-width:1024px) {
     footer .container {
         width: 100%;
-
+    }
+    .footer__under{
+        margin-right: 3rem;
+    }
+    .footer__under__wrap{
+        display: flex;
+        justify-content: space-between;
     }
 }
 

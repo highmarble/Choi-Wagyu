@@ -112,6 +112,10 @@
         const objectCount = products.length;
         const objectCountDiv = document.getElementById("objectCountDiv");
         objectCountDiv.innerHTML = objectCount;
+
+        $(function () {
+            $('.footer').load('/common/header-footer/footer.html');
+        });
     </script>
     <script src="/subpage/product-list/js/sub.js"></script>
 
