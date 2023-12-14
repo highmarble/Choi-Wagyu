@@ -65,13 +65,15 @@
         <div class="spacer"></div>
         <div style="max-width: 1200px; margin: 0 auto; overflow: hidden;">
             <!-- <p class="prd-count">총 <span id="objectCountDiv" style="font-weight: bold;"></span>개의 상품이 있습니다.</p> -->
-            <p class="prd-count">상품 준비중입니다.</p>
             <ul id="items">
             </ul>
+            <div class="coming-soon">
+                <img src="/subpage/product-list/img/coming-soon.png" alt="상품준비중입니다">
+            </div>
         </div>
 
     </section>
-    <div class="pagination-container">
+    <!-- <div class="pagination-container">
         <button class="pagination-button" id="prev-button" aria-label="Previous page" title="Previous page">
             <img src="/subpage/product-list/img/left-fill.png" alt="prev-button">
         </button>
@@ -83,19 +85,12 @@
         <button class="pagination-button" id="next-button" aria-label="Next page" title="Next page">
             <img src="/subpage/product-list/img/right-fill.png" alt="next-button">
         </button>
-    </div>
+    </div> -->
 
 
     <footer class="footer"></footer>
 
     <script>
-         //items
-        
-        //count
-        const objectCount = products.length;
-        const objectCountDiv = document.getElementById("objectCountDiv");
-        objectCountDiv.innerHTML = objectCount;
-        
         $(function () {
             $('.footer').load('/common/header-footer/footer.html');
         });
