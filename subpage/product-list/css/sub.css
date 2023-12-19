@@ -512,9 +512,10 @@
     margin-bottom: 2rem;
 }
 .company-top-cont h1{
-    font-size: 2.5rem;
+    font-size: 1.9rem;
     font-weight: 600;
     padding:10px 0 20px 0;
+    line-height: 1.3;
 }
 .company-top-cont img{
     margin-bottom: 2rem;
@@ -859,6 +860,7 @@
     }
     .company-top-cont h1{
         font-size: 3rem;
+        letter-spacing: -2px;
     }
     .company-container .solution-box{
         width: calc(50% - 10px);
